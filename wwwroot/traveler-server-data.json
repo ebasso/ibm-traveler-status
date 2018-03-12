@@ -1,0 +1,29 @@
+{
+  "title": "Traveler Statistics",
+  "lastRun": "2018-03-12 16:06:04.342",
+  "servers": [{
+    "status": 1,
+    "ai": 99,
+    "name": "srv84/Company",
+    "devices": 0,
+    "users": 16
+  }, {
+    "status": 1,
+    "ai": 100,
+    "name": "srv85/Company",
+    "devices": 0,
+    "users": 5
+  }, {
+    "status": 1,
+    "ai": 100,
+    "name": "srv86/Company",
+    "devices": 0,
+    "users": 18
+  }, {
+    "status": 1,
+    "ai": 98,
+    "name": "srv87/Company",
+    "devices": 0,
+    "users": 12
+  }]
+}

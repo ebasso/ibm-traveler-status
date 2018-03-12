@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <title>Traveler Status</title>
+        <meta http-equiv="refresh" content="300">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="css/bootstrap.css" media="screen">
+        <link rel="stylesheet" href="css/custom.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+                <script src="../bower_components/html5shiv/dist/html5shiv.js"></script>
+                <script src="../bower_components/respond/dest/respond.min.js"></script>
+              <![endif]-->
+    </head>
+
+    <body>
+        <div class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a href="#" class="navbar-brand">Traveler Status</a>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <!-- Page Heading -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="row">
+                        <h2 class="page-header">Traveler
+                            <small>&nbsp;-&nbsp;Last Run:&nbsp;</small>
+                            <span id="domo-page-title-lastrun">
+                            </span>
+                        </h2>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-9">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <strong>Devices Sync Status</strong>
+                                </div>
+                                <!-- /.panel-heading -->
+                                <div class="panel-body">
+                                    <table width="100%" class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Devices</th>
+                                                <th>Less than 2 hours</th>
+                                                <th>Less than 12 hours</th>
+                                                <th>Less than 72 hours</th>
+                                                <th>More than 72 hours</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody style="font-size: 18px" id="domo-tbody-devices-stats">
+                                            <tr>
+                                                <td>NN</td>
+                                                <td>
+                                                    <span class="label label-success">&nbsp;&nbsp;NNN&nbsp;&nbsp;</span>
+                                                </td>
+                                                <td>
+                                                    <span class="label label-warning">&nbsp;&nbsp;NN&nbsp;&nbsp;</span>
+                                                </td>
+                                                <td>
+                                                    <span class="label label-danger">&nbsp;&nbsp;NN&nbsp;&nbsp;</span>
+                                                </td>
+                                                <td>
+                                                    <span class="label label-default">&nbsp;&nbsp;NN&nbsp;&nbsp;</span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!-- /.table-responsive -->
+                                </div>
+                                <!-- /.panel-body -->
+                            </div>
+                            <!-- /.panel -->
+                        </div>
+                        <!-- /.col-lg-9 -->
+                        <div class="col-lg-3" id="devicetypes_section">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">Device Clients
+                                </div>
+                                <!-- /.panel-heading -->
+                                <div class="panel-body">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Client</th>
+                                                <th>#</th>
+                                                <th>%</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody style="font-size: 14px" id="domo-tbody-devices-clients">
+                                            <tr>
+                                                <td>xxxxx</td>
+                                                <td>NN</td>
+                                                <td>NN%</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!-- /.table-responsive -->
+                                </div>
+                                <!-- /.panel-body -->
+                            </div>
+                            <!-- /.panel -->
+                        </div>
+                    </div>
+                    <!-- /.row -->
+
+                    <div class="row">
+                        <div class="col-lg-9">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <strong>Server Status</strong>
+                                    <small id="domo-section-server-lastrun"></small>
+                                </div>
+                                <!-- /.panel-heading -->
+                                <div class="panel-body">
+                                    <table width="100%" class="table">
+                                        <thead id="domo-thead-update">
+                                            <tr>
+                                                <th>Server</th>
+                                                <th>Status</th>
+                                                <th>Availability Index</th>
+                                                <th># of Users</th>
+                                                <th># of Devices</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="domo-tbody-server-health">
+                                            <tr>
+                                                <td>Server Name</td>
+                                                <td>
+                                                    <span class="label label-success">Status</span>
+                                                </td>
+                                                <td>AI</td>
+                                                <td>NU</td>
+                                                <td>ND</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!-- /.table-responsive -->
+                                </div>
+                                <!-- /.panel-body -->
+                            </div>
+                            <!-- /.panel -->
+                        </div>
+                        <!-- /.col-lg-9 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12" id="dispositivos_section">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Devices
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <table class="table table-striped" style="max-width: none; table-layout: fixed; word-wrap: break-word;">
+                                <thead>
+                                    <tr>
+                                        <th class="col-lg-2">Username</th>
+                                        <th class="col-lg-2">Device Id</th>
+                                        <th class="col-lg-1">Last Sync Time</th>
+                                        <th class="col-lg-1">Push Enabled</th>
+                                        <th class="col-lg-1">Pending Sync</th>
+                                        <th class="col-lg-1">Apps To Sync</th>
+                                        <th class="col-lg-1">Change Flags</th>
+                                        <th class="col-lg-1">Comments</th>
+                                    </tr>
+                                </thead>
+                                <tbody style="font-size:11px" id="tbody-devices">
+                                    <tr>
+                                        <td>username</td>
+                                        <td>deviceid</td>
+                                        <td>ls</td>
+                                        <td>pe</td>
+                                        <td>ps</td>
+                                        <td>ap2sy</td>
+                                        <td>change_flags</td>
+                                        <td>cmts</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+            <footer>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <ul class="list-unstyled">
+                            <li class="pull-right">
+                                <a href="#top">Back to top</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <!-- container-fluid -->
+
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/custom.js"></script>
+        <script>
+            $.getJSON('traveler-server-data.json', function (data) {
+                $('#domo-section-server-lastrun').html(' em: ' + data.lastRun);
+
+                var out1 = '';
+                $.each(data.servers, function (key, val) {
+                    out1 += '<tr><td>' + val.name + '</td>';
+                    if (val.status === 1)
+                        out1 += '<td>' + toBootstrap('Green', 'Up') + '</td>';
+                    else
+                        out1 += '<td>' + toBootstrap('Red', 'Down') + '</td>';
+                    var status = 'Red';
+                    if (val.ai > 70)
+                        status = 'Green';
+                    else if (val.ai > 30)
+                        status = 'Yellow';
+                    
+                    out1 += '<td>' + toBootstrap(status,val.ai) + '</td>';
+                    out1 += '<td>' + val.users + '</td>';
+                    if (val.devices > 0)
+                        out1 += '<td>' + val.devices + '</td>';
+                    else
+                        out1 += '<td>--</td>';
+                    out1 += '</tr>';
+                });
+                $('#domo-tbody-server-health').html(out1);
+            });
+
+            $.getJSON('traveler-devices-data.json', function (data) {
+
+                $('#domo-page-title-lastrun').html(data.lastRun);
+
+                var out1 = '<tr>';
+                out1 += '<td>' + toBootstrap('Primary', data.countDevices) + '</td>';
+                out1 += '<td>' + toBootstrap('Green', data.countDevicesGreen) + '</td>';
+                out1 += '<td>' + toBootstrap('Yellow', data.countDevicesYellow) + '</td>';
+                out1 += '<td>' + toBootstrap('Red', data.countDevicesRed) + '</td>';
+                out1 += '<td>' + toBootstrap('Gray', data.countDevicesGray) + '</td>';
+                out1 += '</tr><tr>';
+                out1 += '<td>100%</td>';
+                out1 += '<td>' + toBootstrap('Green', data.percDevicesGreen) + '</td>';
+                out1 += '<td>' + toBootstrap('Yellow', data.percDevicesYellow) + '</td>';
+                out1 += '<td>' + toBootstrap('Red', data.percDevicesRed) + '</td>';
+                out1 += '<td>' + toBootstrap('Gray', data.percDevicesGray) + '</td>';
+                out1 += '</tr>';
+
+                $('#domo-tbody-devices-stats').html(out1);
+
+                var out2 = '';
+                $.each(data.devices, function (key, val) {
+                    out2 += '<tr>';
+                    out2 += '<td>' + val.username + '</td>';
+                    out2 += '<td>' + val.deviceid + '</td>';                   
+                    var status = 'Gray';
+                    if (val.ls_status === 'lessThan2h')
+                        status = 'Green';
+                    else if (val.ls_status === 'lessThan12h')
+                        status = 'Yellow';
+                    else if (val.ls_status === 'lessThan72h')
+                        status = 'Red';
+                    out2 += '<td>' + toBootstrap(status, val.ls) + '</td>';
+                    out2 += '<td>' + val.pe + '</td>';
+                    out2 += '<td>' + val.ps + '</td>';
+                    out2 += '<td>' + val.ap2sy + '</td>';
+                    out2 += '<td>' + val.cf + '</td>';
+                    out2 += '<td>' + val.cmts + '</td>';
+                    out2 += '</tr>';
+                });
+                $('#tbody-devices').html(out2);
+
+                var out3 = '';
+                console.log(data.deviceClients);
+                $.each(data.deviceClients, function (key, val) {
+                    out3 += '<tr>';
+                    out3 += '<td>' + val.client + '</td>';
+                    out3 += '<td>' + val.qtd + '</td>';
+                    out3 += '<td>' + val.perc + '</td>';
+                    out3 += '</tr>';
+                });
+                $('#domo-tbody-devices-clients').html(out3);
+            });
+
+            $(document).ready(function () {
+                $('[data-toggle="tooltip"]').tooltip();
+            });
+
+            function toBootstrap(status, text) {
+
+                if (status == 'Green') {
+                    return '<span class="label label-success">' + text + '</span>';
+                }
+                if (status == 'Yellow') {
+                    return '<span class="label label-warning">' + text + '</span>';
+                }
+                if (status == 'Red') {
+                    return '<span class="label label-danger">' + text + '</span>';
+                }
+                if (status == 'Gray') {
+                    return '<span class="label label-default">' + text + '</span>';
+                }
+                if (status == 'Primary') {
+                    return '<span class="label label-primary">' + text + '</span>';
+                }
+                if (status == 'Info') {
+                    return '<span class="label label-info">' + text + '</span>';
+                }
+                return text;
+            }
+        </script>
+    </body>
+
+</html>

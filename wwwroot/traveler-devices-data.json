@@ -1,0 +1,112 @@
+{
+  "title": "Traveler Statistics",
+  "lastRun": "2018-03-12 16:06:04.342",
+  "countDevices": 85,
+  "countDevicesGreen": 56,
+  "countDevicesYellow": 8,
+  "countDevicesRed": 4,
+  "countDevicesGray": 17,
+  "percDevicesGreen": 65,
+  "percDevicesYellow": 9,
+  "percDevicesRed": 4,
+  "percDevicesGray": 20,
+  "deviceClients": [{
+    "client": "Android",
+    "qtd": 6,
+    "perc": 7
+  }, {
+    "client": "Apple",
+    "qtd": 75,
+    "perc": 88
+  }, {
+    "client": "Apple (Verse)",
+    "qtd": 3,
+    "perc": 3
+  }],
+  "httpCodes": [{
+    "code": "200 OK",
+    "qtd": 0,
+    "perc": 0
+  }, {
+    "code": "499 Conflict",
+    "qtd": 0,
+    "perc": 0
+  }, {
+    "code": "403 Acesso proibido",
+    "qtd": 0,
+    "perc": 0
+  }, {
+    "code": "409 Sync resume",
+    "qtd": 0,
+    "perc": 0
+  }, {
+    "code": "449 Conflict",
+    "qtd": 0,
+    "perc": 0
+  }, {
+    "code": "503 Servidor Ocupado",
+    "qtd": 0,
+    "perc": 0
+  }, {
+    "code": "000 Null",
+    "qtd": 0,
+    "perc": 0
+  }],
+  "devices": [{
+    "deviceid": "ApplDV6FDFSDF8F4YD",
+    "username": "User A",
+    "dp": "",
+    "ls": "2018-03-12 06:36:17.0",
+    "ls_status": "lessThan12h",
+    "lp": "",
+    "hs": "",
+    "pe": "true",
+    "ps": "true",
+    "ap2sy": "folder, mail, calendar, contact, serviceability, security",
+    "cf": "mail:add/update/delete(4:add/update/delete:79), calendar:add/update/delete(3:add/update/delete), contact:add/update:1, serviceability:configGetAS",
+    "lt": "",
+    "cmts": []
+  }, {
+    "deviceid": "RMGP7E7FWFEB19565EUT6VMC",
+    "username": "User B",
+    "dp": "",
+    "ls": "2018-03-12 15:46:36.0",
+    "ls_status": "lessThan2h",
+    "lp": "",
+    "hs": "",
+    "pe": "true",
+    "ps": "false",
+    "ap2sy": "folder, mail, calendar, contact, serviceability, security",
+    "cf": "",
+    "lt": "",
+    "cmts": []
+  }, {
+    "deviceid": "Android_2182123454987008",
+    "username": "User C",
+    "dp": "",
+    "ls": "00000000000000",
+    "ls_status": "moreThan72h",
+    "lp": "",
+    "hs": "",
+    "pe": "true",
+    "ps": "true",
+    "ap2sy": "serviceability, security",
+    "cf": "serviceability:configGet/configSet",
+    "lt": "",
+    "cmts": []
+  }, {
+    "deviceid": "IBM_IOS_748B3BC6BF42345602D693700C",
+    "username": "User D",
+    "dp": "",
+    "ls": "00000000000000",
+    "ls_status": "moreThan72h",
+    "lp": "",
+    "hs": "",
+    "pe": "false",
+    "ps": "true",
+    "ap2sy": "mail, calendar, journal, task, serviceability, security",
+    "cf": "mail:add/update/delete(300000000000029868:add/update/delete:67, 300000000000029879:add, 300000000000029857:update/delete:2, 300000000000029869:add:1, 300000000000029848:add:1, 300000000000029859:add, 300000000000029849:add/update:113, 300000000000029881:add/update:27, 300000000000029871:add, 300000000000029850:add/update/delete:30, 300000000000029862:add/update:3, 300000000000029864:add:1, 300000000000029854:add:2, 300000000000029855:add/update/delete:17, 300000000000029866:add/update, 300000000000029878:update), calendar:add/update/delete:9, serviceability:configGet",
+    "lt": "",
+    "cmts": []
+  }]
+}
