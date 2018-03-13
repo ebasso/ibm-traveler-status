@@ -27,10 +27,8 @@ import java.sql.Timestamp;
 public class Device {
 
     String deviceid;
-    //"Android_69b371bab20a154f", 
-    //": "IBM_IOS_com.zenprise_68A90897020E47D78B1CB3F890D9199E", "ApplDMPJ32BEDJ8T",
 
-    String username; //": "F0091379 Adao Milton Ribeiro da Silva\/BancodoBrasil"
+    String username; 
     String applications_to_synchronize; //  ": "mail , calendar, journal, task, serviceability, security
     String change_flags; //  ": "mail   :add(292244152:add:8), serviceability:configGet",
     String last_sync_time; //": "1519914403000",
